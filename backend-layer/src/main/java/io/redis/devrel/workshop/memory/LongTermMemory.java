@@ -38,7 +38,8 @@ public class LongTermMemory {
 
     @Bean
     public RetrievalAugmentor getRetrievalAugmentor(ChatModel chatModel) {
-        QueryTransformer queryTransformer = new CompressingQueryTransformer(chatModel);
+        // TODO: Implement a CompressingQueryTransformer that uses the LLM to optimize the query
+        QueryTransformer queryTransformer = null;
 
         ContentInjector contentInjector = DefaultContentInjector.builder()
                 .promptTemplate(PromptTemplate.from("{{userMessage}}\n\n[Context]\n{{contents}}"))
@@ -54,14 +55,8 @@ public class LongTermMemory {
                 .fallbackStrategy(LanguageModelQueryRouter.FallbackStrategy.ROUTE_TO_ALL)
                 .build();
 
-        ScoringModel scoringModel = new OnnxScoringModel(
-                modelManager.getModelPath(),
-                modelManager.getTokenizerPath()
-        );
-        ContentAggregator contentAggregator = ReRankingContentAggregator.builder()
-                .scoringModel(scoringModel)
-                .minScore(0.8)
-                .build();
+        // TODO: Implement a ReRankingContentAggregator with a scoring model to rank the retrieved contents
+        ContentAggregator contentAggregator = null;
 
         return DefaultRetrievalAugmentor.builder()
                 .queryTransformer(queryTransformer)

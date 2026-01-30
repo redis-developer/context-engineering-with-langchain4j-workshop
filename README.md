@@ -57,7 +57,7 @@ This workshop is organized into 9 progressive labs, each building upon the previ
 
 ### Step 1: Clone the repository
 ```bash
-git clone https://github.com/redis-developer/context-engineering-with-langchain4j.git
+git clone https://github.com/redis-developer/context-engineering-with-langchain4j-workshop.git
 ```
 
 ### Step 2: Verify your Environment
@@ -72,7 +72,7 @@ git --version
 ### Step 3: Begin your First Lab
 Navigate to the cloned repository and switch to the first lab's starter branch:
 ```bash
-cd context-engineering-with-langchain4j
+cd context-engineering-with-langchain4j-workshop
 git checkout lab-1-starter
 ```
 

@@ -1,7 +1,7 @@
 # Context Engineering with LangChain4J Workshop
 
 ## Overview
-Welcome to this hands-on workshop, where you'll learn to implement sophisticated context-engineering patterns. Context Engineering is the practice of strategically designing, structuring, and optimizing the information provided to AI models (particularly LLMs) to achieve desired outputs. It goes beyond simple prompt engineering by considering the entire context window and how data is organized, presented, and sequenced to maximize model performance. In this workshop, you will learn how to implement this using [Java](https://www.java.com/en/), [LangChain4J](https://github.com/langchain4j/langchain4j), and [Redis](https://redis.io/).
+Welcome to this hands-on workshop, where you'll learn to implement sophisticated context-engineering patterns. Context Engineering is the practice of strategically designing, structuring, and optimizing the information provided to AI models (particularly LLMs) to achieve desired outputs. It goes beyond using simple prompt engineering by considering the entire context window and how data is organized, presented, and sequenced to maximize model performance. In this workshop, you will learn how to implement this using [Java](https://www.java.com/en/), [LangChain4J](https://github.com/langchain4j/langchain4j), and [Redis](https://redis.io/).
 
 ### 🎯 What you'll build
 
@@ -41,17 +41,17 @@ By the end of this workshop, you'll have built a complete AI application featuri
 ## 🗺️ Workshop Structure
 This workshop is organized into 9 progressive labs, each building upon the previous:
 
-| Lab | Topic                                                           | Duration | Branch                             |
-|:----|:----------------------------------------------------------------|:---------|:-----------------------------------
-| 1   | Set up and deploy the AI application                            | 25 mins  | `lab-1-starter` → `lab-1-solution` |
-| 2   | Enabling short-term memory with chat memory                     | 10 mins  | `lab-2-starter` → `lab-2-solution` |
-| 3   | Knowledge base with embeddings, parsers, and splitters          | 10 mins  | `lab-3-starter` → `lab-3-solution` |
-| 4   | Implementing basic RAG with knowledge base data                 | 20 mins  | `lab-4-starter` → `lab-4-solution` |
-| 5   | Enabling on-demand context management for memories              | 10 mins  | `lab-5-starter` → `lab-5-solution` |
-| 6   | Implementing query compression and context reranking            | 15 mins  | `lab-6-starter` → `lab-6-solution` |
-| 7   | Implementing a few-shot into the system prompt design           | 05 mins  | `lab-7-starter` → `lab-7-solution` |
-| 8   | Enabling token management to handle token limits                | 10 mins  | `lab-8-starter` → `lab-8-solution` |
-| 9   | Implementing semantic caching for conversations                 | 25 mins  | `lab-9-starter` → `lab-9-solution` |
+| Lab | Topic                                                           | Duration | Branch                            |
+|:----|:----------------------------------------------------------------|:---------|:----------------------------------
+| 1   | Set up and deploy the AI application                            | 25 mins  | `lab-1-starter` |
+| 2   | Enabling short-term memory with chat memory                     | 10 mins  | `lab-2-starter` |
+| 3   | Knowledge base with embeddings, parsers, and splitters          | 10 mins  | `lab-3-starter` |
+| 4   | Implementing basic RAG with knowledge base data                 | 20 mins  | `lab-4-starter` |
+| 5   | Enabling on-demand context management for memories              | 10 mins  | `lab-5-starter` |
+| 6   | Implementing query compression and context reranking            | 15 mins  | `lab-6-starter` |
+| 7   | Implementing a few-shot into the system prompt design           | 05 mins  | `lab-7-starter` |
+| 8   | Enabling token management to handle token limits                | 10 mins  | `lab-8-starter` |
+| 9   | Implementing semantic caching for conversations                 | 25 mins  | `lab-9-starter` |
 
 ## 🚀 Getting Started
 

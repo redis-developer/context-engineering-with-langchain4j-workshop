@@ -38,7 +38,7 @@ public class LongTermMemory {
 
     @Bean
     public RetrievalAugmentor getRetrievalAugmentor(ChatModel chatModel) {
-        // TODO: Implement a CompressingQueryTransformer that uses the LLM to optimize the query
+        // TODO: Implement a CompressingQueryTransformer that uses the chatModel to optmize the query
         QueryTransformer queryTransformer = null;
 
         ContentInjector contentInjector = DefaultContentInjector.builder()
@@ -55,7 +55,7 @@ public class LongTermMemory {
                 .fallbackStrategy(LanguageModelQueryRouter.FallbackStrategy.ROUTE_TO_ALL)
                 .build();
 
-        // TODO: Implement a ReRankingContentAggregator with a scoring model to rank the retrieved contents
+        // TODO: Implement a ReRankingContentAggregator that uses an scoring model to rerank the context
         ContentAggregator contentAggregator = null;
 
         return DefaultRetrievalAugmentor.builder()

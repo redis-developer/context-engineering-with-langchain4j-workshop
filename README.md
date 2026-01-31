@@ -1,7 +1,5 @@
 # Lab 1: Set up and deploy the AI application
 
-## 🕗 Estimated Time: 25 minutes
-
 ## 🎯 Learning Objectives
 
 By the end of this lab, you will:
@@ -10,6 +8,8 @@ By the end of this lab, you will:
 - Deploy the base Node.js frontend application for testing purposes
 - Understand the core architecture for LangChain4J-based AI applications
 - Play with the AI application to verify correct LLM connectivity
+
+### 🕗 Estimated Time: 25 minutes
 
 ## 🏗️ What You're Building
 

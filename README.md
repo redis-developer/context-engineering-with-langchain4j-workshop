@@ -9,7 +9,7 @@ By the end of this lab, you will:
 - Understand the core architecture for LangChain4J-based AI applications
 - Play with the AI application to verify correct LLM connectivity
 
-### 🕗 Estimated Time: 25 minutes
+#### 🕗 Estimated Time: 25 minutes
 
 ## 🏗️ What You're Building
 
@@ -149,16 +149,6 @@ At this stage, your application lacks:
 - ❌ **No Context Awareness**: No previous message history
 
 **This is intentional!** We'll add these capabilities in the next lab.
-
-## ✅ Success Criteria
-
-Before moving to Lab 2, ensure:
-
-- [ ] Backend application starts without errors
-- [ ] Frontend loads and displays the chat interface
-- [ ] You can send a message and receive a response
-- [ ] OpenAI API connection is working as expected
-- [ ] You understand the basic project structure
 
 ## 🐛 Troubleshooting
 

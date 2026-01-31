@@ -63,7 +63,7 @@ KNOWLEDGE_BASE_INPUT_FILES=/data/input-files
 
 ### Step 2: Add Sample PDF Documents
 
-Place at least one or more PDF files in the `$KNOWLEDGE_BASE_INPUT_FILES` directory. For testing, you can use any PDF document that has multiple pages and paragraphs.
+Place at least one or more PDF files in the `KNOWLEDGE_BASE_INPUT_FILES` directory. For testing, you can use any PDF document that has multiple pages and paragraphs.
 
 ### Step 3: Review the FilesProcessor Implementation
 
@@ -161,7 +161,7 @@ INFO  FilesProcessor : Processed your-document.pdf - 15 segments stored out of 1
 
 ### Document Processing Verification
 
-1. Place a PDF file in the `$KNOWLEDGE_BASE_INPUT_FILES` directory
+1. Place a PDF file in the `KNOWLEDGE_BASE_INPUT_FILES` directory
 2. Wait 5-10 seconds for the scheduled scanner to detect it
 3. Check the logs for processing confirmation
 4. Verify the file is renamed to `.processed`

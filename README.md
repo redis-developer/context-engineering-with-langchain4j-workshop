@@ -82,8 +82,8 @@ Change from this:
 ```java
 @Bean
 public ChatMemoryStore chatMemoryStore() {
-  // TODO: Implement a WorkingMemoryStore that connects to the agentMemoryServerUrl
-  return null;
+    // TODO: Implement a WorkingMemoryStore that connects to the agentMemoryServerUrl
+    return null;
 }
 ```
 
@@ -110,8 +110,8 @@ Change from this:
 ```java
 @Bean
 public ChatMemory chatMemory(ChatMemoryStore chatMemoryStore) {
-  // TODO: Implement a WorkingMemoryChat that uses the WorkingMemoryStore
-  return null;
+    // TODO: Implement a WorkingMemoryChat that uses the WorkingMemoryStore
+    return null;
 }
 ```
 
@@ -120,10 +120,10 @@ To this:
 ```java
 @Bean
 public ChatMemory chatMemory(ChatMemoryStore chatMemoryStore) {
-  return WorkingMemoryChat.builder()
-          .id(userId)
-          .chatMemoryStore(chatMemoryStore)
-          .build();
+    return WorkingMemoryChat.builder()
+            .id(userId)
+            .chatMemoryStore(chatMemoryStore)
+            .build();
 }
 ```
 
@@ -243,7 +243,7 @@ Congratulations! You've successfully:
 
 ## 📚 Additional Resources
 
-- [Redis Agent Memory Server]{https://redis.github.io/agent-memory-server/}
+- [Redis Agent Memory Server](https://redis.github.io/agent-memory-server/)
 - [LangChain4J Chat Memory](https://docs.langchain4j.dev/tutorials/chat-memory)
 
 ## ➡️ Next Steps

@@ -47,11 +47,11 @@ Open `backend-layer/src/main/java/io/redis/devrel/workshop/services/LangCacheSer
 
 ```java
 public class LangCacheService {
-    // Stores new responses in cache
-    public void addNewResponse(String prompt, String response) {...}
-    
-    // Searches for similar cached responses
-    public Optional<String> searchForResponse(String prompt) {...}
+   // Stores new responses in cache
+   public void addNewResponse(String prompt, String response) {...}
+
+   // Searches for similar cached responses
+   public Optional<String> searchForResponse(String prompt) {...}
 }
 ```
 
@@ -269,10 +269,9 @@ You've now built a complete context engineering solution with:
 
 ## 📚 Additional Resources
 
-- [Redis LangCache Documentation](https://redis.io/docs/langcache/)
-- [Semantic Caching Best Practices](https://redis.com/blog/semantic-caching-llm/)
-- [Vector Similarity Search](https://redis.io/docs/stack/search/reference/vectors/)
-- [LLM Cost Optimization](https://www.pinecone.io/learn/llm-cost-optimization/)
+- [What is Semantic Caching?](https://redis.io/blog/what-is-semantic-caching/)
+- [Redis LangCache Documentation](https://redis.io/docs/latest/develop/ai/langcache/)
+- [Vector Similarity Search](https://redis.io/docs/latest/develop/ai/search-and-query/vectors/)
 
 ## 🚀 Next Steps
 

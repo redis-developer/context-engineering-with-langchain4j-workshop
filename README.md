@@ -52,7 +52,13 @@ Before starting, ensure you have:
 
 ## 🚀 Setup Instructions
 
-### Step 1: Review the LongTermMemory Configuration
+### Step 1: Switch to the Lab 4 Branch
+
+```bash
+git checkout lab-4-starter
+```
+
+### Step 2: Review the LongTermMemory Configuration
 
 Open `backend-layer/src/main/java/io/redis/devrel/workshop/memory/LongTermMemory.java` and review the RAG configuration structure:
 
@@ -78,7 +84,7 @@ public class LongTermMemory {
 }
 ```
 
-### Step 2: Implement the Knowledge Base Content Retriever
+### Step 3: Implement the Knowledge Base Content Retriever
 
 In `LongTermMemory.java`, locate and implement the `getGeneralKnowledgeBase()` method.
 
@@ -102,7 +108,7 @@ private ContentRetriever getGeneralKnowledgeBase() {
 }
 ```
 
-### Step 3: Configure the RAG pipeline
+### Step 4: Configure the RAG pipeline
 
 In the `getRetrievalAugmentor()` method, implement the content injector configuration.
 
@@ -136,7 +142,7 @@ public RetrievalAugmentor getRetrievalAugmentor() {
 }
 ```
 
-### Step 4: Rebuild and Run the Backend
+### Step 5: Rebuild and Run the Backend
 
 ```bash
 cd backend-layer
@@ -144,7 +150,7 @@ mvn clean package
 mvn spring-boot:run
 ```
 
-### Step 5: Keep the Frontend Running
+### Step 6: Keep the Frontend Running
 
 The frontend should still be running. If not:
 

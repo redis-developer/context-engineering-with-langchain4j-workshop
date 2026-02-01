@@ -19,7 +19,7 @@ public class ShortTermMemory {
     @Value("${langchain4j.open-ai.streaming-chat-model.model-name}")
     private String modelName;
 
-    @Value("${chat.message.max.tokens}")
+    @Value("${chat.memory.max.tokens}")
     private int maxTokens;
 
     @Autowired

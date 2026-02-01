@@ -54,7 +54,13 @@ Before starting, ensure you have:
 
 ## 🚀 Setup Instructions
 
-### Step 1: Review the Current System Prompt
+### Step 1: Switch to the Lab 7 Branch
+
+```bash
+git checkout lab-7-starter
+```
+
+### Step 2: Review the Current System Prompt
 
 Open `backend-layer/src/main/java/io/redis/devrel/workshop/controller/ChatController.java` and locate the `SYSTEM_PROMPT` constant:
 
@@ -65,7 +71,7 @@ private static final String SYSTEM_PROMPT = """
             """;
 ```
 
-### Step 2: Add Few-shot Examples to the System Prompt
+### Step 3: Add Few-shot Examples to the System Prompt
 
 Replace the existing `SYSTEM_PROMPT` with an enhanced version that includes few-shot examples.
 
@@ -137,7 +143,7 @@ private static final String SYSTEM_PROMPT = """
             """;
 ```
 
-### Step 3: Rebuild and Run the Backend
+### Step 4: Rebuild and Run the Backend
 
 ```bash
 cd backend-layer
@@ -145,7 +151,7 @@ mvn clean package
 mvn spring-boot:run
 ```
 
-### Step 4: Keep the Frontend Running
+### Step 5: Keep the Frontend Running
 
 The frontend should still be running. If not:
 

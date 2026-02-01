@@ -71,7 +71,7 @@ Your application now implements a comprehensive context engineering solution wit
 ### 7. **Semantic Caching** (Lab 9)
 - **Technique**: Vector Similarity Caching
 - **Implementation**: Redis LangCache with embedding-based matching
-- **Reference**: [Semantic Caching for LLMs](https://arxiv.org/abs/2301.11510)
+- **Reference**: [Semantic Caching for LLMs](https://arxiv.org/html/2504.02268v1)
 - **Benefits**:
    - 40-60% reduction in LLM calls
    - Sub-100ms response times for cached queries

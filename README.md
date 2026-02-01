@@ -56,7 +56,13 @@ Before starting, ensure you have:
 
 ## 🚀 Setup Instructions
 
-### Step 1: Review Token Configuration
+### Step 1: Switch to the Lab 8 Branch
+
+```bash
+git checkout lab-8-starter
+```
+
+### Step 2: Review Token Configuration
 
 Open `backend-layer/src/main/java/io/redis/devrel/workshop/memory/ShortTermMemory.java` and review the token-related configuration:
 
@@ -68,7 +74,7 @@ private String modelName;
 private int maxTokens;
 ```
 
-### Step 2: Implement Token Window Chat Memory
+### Step 3: Implement Token Window Chat Memory
 
 In `ShortTermMemory.java`, update the `chatMemory()` method to use token-based memory management.
 
@@ -97,7 +103,7 @@ public ChatMemory chatMemory(ChatMemoryStore chatMemoryStore) {
 }
 ```
 
-### Step 3: Configure Token Limits
+### Step 4: Configure Token Limits
 
 Include the following property to your `.env` file:
 
@@ -107,7 +113,7 @@ CHAT_MEMORY_MAX_TOKENS=768
 
 The `max-tokens` value of `768` is very low for production environments but is suitable for testing token management behavior. This will give you a good testing experience so you won't have to create lenghty conversations with the AI to see the message pruning in action.
  
-### Step 4: Rebuild and Run the Backend
+### Step 5: Rebuild and Run the Backend
 
 ```bash
 cd backend-layer
@@ -115,7 +121,7 @@ mvn clean package
 mvn spring-boot:run
 ```
 
-### Step 5: Keep the Frontend Running
+### Step 6: Keep the Frontend Running
 
 The frontend should still be running. If not:
 

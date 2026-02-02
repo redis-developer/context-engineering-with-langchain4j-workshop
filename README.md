@@ -249,7 +249,3 @@ Congratulations! You've successfully:
 ## ➡️ Next Steps
 
 You're ready for [Lab 3: Knowledge Base with Embeddings, Parsers, and Splitters](../lab-3-starter/README.md) where you'll add document processing and knowledge base capabilities.
-
-```bash
-git checkout lab-3-starter
-```

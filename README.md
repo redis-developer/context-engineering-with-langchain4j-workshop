@@ -1,7 +1,21 @@
 # Context Engineering Workshop for Java Developers
 
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![Java 21+](https://img.shields.io/badge/Java-21%2B-blue.svg)](https://www.oracle.com/java/technologies/downloads)
+[![LangChain4J](https://img.shields.io/badge/LangChain4J-Framework-green.svg)](https://github.com/langchain4j/langchain4j)
+
 ## Overview
-Welcome to this hands-on workshop, where you'll learn to implement sophisticated context-engineering patterns. Context Engineering is the practice of strategically designing, structuring, and optimizing the information provided to AI models (particularly LLMs) to achieve desired outputs. It goes beyond using simple prompt engineering by considering the entire context window and how data is organized, presented, and sequenced to maximize model performance. In this workshop, you will learn how to implement this using [Java](https://www.java.com/en/), [LangChain4J](https://github.com/langchain4j/langchain4j), and [Redis](https://redis.io/).
+Welcome to this hands-on workshop, where you'll learn to implement sophisticated context-engineering patterns. Context Engineering is the practice of strategically designing, structuring, and optimizing the information provided to AI models (particularly LLMs) to achieve desired outputs. It goes beyond simple prompt engineering by considering the entire context window and how data is organized, presented, and sequenced to maximize model performance. In this workshop, you will learn how to implement this using [Java](https://www.java.com/en/), [LangChain4J](https://github.com/langchain4j/langchain4j), and [Redis](https://redis.io/).
+
+### 🤔 Why Context Engineering?
+
+LLMs have limited context windows and no inherent memory between conversations. Without proper context engineering:
+- Models lose track of conversation history
+- Responses lack relevant domain knowledge
+- Token limits are exceeded, causing failures
+- Repeated API calls increase costs
+
+This workshop teaches you patterns to solve these challenges systematically.
 
 ### 🎯 What you'll build
 
@@ -33,16 +47,18 @@ By the end of this workshop, you'll have built a complete AI application featuri
 * [Node.js](https://nodejs.org/en/download/)
 
 ### Required accounts
-| Account                                                  | Description                                              |
-|:---------------------------------------------------------|:---------------------------------------------------------|
-| [OpenAI](https://auth.openai.com/create-account)         | LLM that will power the responses for the AI application |
-| [Redis Cloud](https://redis.io/try-free)                 | Semantic caching service powered by Redis LangCache      |
+| Account                                                  | Description                                              | Cost                  |
+|:---------------------------------------------------------|:---------------------------------------------------------|:----------------------|
+| [OpenAI](https://auth.openai.com/create-account)         | LLM that will power the responses for the AI application | Free trial sufficient |
+| [Redis Cloud](https://redis.io/try-free)                 | Semantic caching service powered by Redis LangCache      | Free tier sufficient  |
+
+> 💡 **Note on OpenAI costs:** While OpenAI occasionally offers free trial credits to new accounts, this workshop assumes pay-as-you-go pricing. The estimated cost of $1-3 covers all 9 labs. You can monitor your usage in the [OpenAI dashboard](https://platform.openai.com/usage) to track costs in real-time.
 
 ## 🗺️ Workshop Structure
-This workshop has an estimated duration of 2 hours and is organized into 9 progressive labs, each building on the previous one. Each completed lab will tease out a specific need for context engineering techniques, which will be addressed in the subsequent lab.
+This workshop has an estimated duration of 2 hours and is organized into 9 progressive labs, each building on the previous one. Each lab introduces a specific context engineering challenge, which is then addressed in the subsequent lab.
 
 | Lab | Topic                                                                                                                                                       | Duration | Branch                            |
-|:----|:------------------------------------------------------------------------------------------------------------------------------------------------------------|:---------|:----------------------------------
+|:----|:------------------------------------------------------------------------------------------------------------------------------------------------------------|:---------|:----------------------------------|
 | 1   | [Set up and deploy the AI application](../../tree/lab-1-starter/README.md)                   | 25 mins  | `lab-1-starter` |
 | 2   | [Enabling short-term memory with chat memory](../../tree/lab-2-starter/README.md)            | 10 mins  | `lab-2-starter` |
 | 3   | [Knowledge base with embeddings, parsers, and splitters](../../tree/lab-3-starter/README.md) | 10 mins  | `lab-3-starter` |
@@ -80,12 +96,26 @@ cd context-engineering-workshop-java
 
 Click on the link for [Lab 1: Set up and deploy the AI application](../../tree/lab-1-starter/README.md) to get started!
 
-## Resources
-- [Alexa Skill using Context Engineering](https://github.com/redis-developer/agent-memory-server-with-alexa-demo)
+## 🛠️ Troubleshooting
 
-## Maintainers
-**Maintainers:**
+| Issue | Solution |
+|:------|:---------|
+| Docker containers won't start | Ensure Docker Desktop is running and you have sufficient memory allocated (4GB+ recommended) |
+| OpenAI API errors | Verify your API key is set correctly and has available credits |
+| Maven build fails | Run `mvn clean install -DskipTests` to isolate dependency issues |
+| Port already in use | Check for existing processes on ports 8080 (backend) and 3000 (frontend) |
+
+## 📚 Resources
+- [Alexa Skill using Context Engineering](https://github.com/redis-developer/agent-memory-server-with-alexa-demo)
+- [LangChain4J Documentation](https://docs.langchain4j.dev/)
+- [Redis Vector Search Documentation](https://redis.io/docs/latest/develop/interact/search-and-query/query/vector-search/)
+- [OpenAI API Reference](https://platform.openai.com/docs/api-reference)
+
+## 🤝 Contributing
+Contributions are welcome! Please feel free to submit a Pull Request. For major changes, please open an issue first to discuss what you would like to change.
+
+## 👥 Maintainers
 - Ricardo Ferreira — [@riferrei](https://github.com/riferrei)
 
-## License
+## 📄 License
 This project is licensed under the [MIT License](./LICENSE).

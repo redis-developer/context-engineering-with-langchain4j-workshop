@@ -47,11 +47,11 @@ Open `backend-layer/src/main/java/io/redis/devrel/workshop/services/LangCacheSer
 
 ```java
 public class LangCacheService {
-    // Stores new responses in cache
-    public void addNewResponse(String prompt, String response) {...}
-    
-    // Searches for similar cached responses
-    public Optional<String> searchForResponse(String prompt) {...}
+   // Stores new responses in cache
+   public void addNewResponse(String prompt, String response) {...}
+
+   // Searches for similar cached responses
+   public Optional<String> searchForResponse(String prompt) {...}
 }
 ```
 
@@ -65,9 +65,9 @@ Key configuration values:
 2. Navigate to the LangCache section in the left menu
 3. Create a new service with `Quick service creation`
 4. Note down:
-    - **Base URL**
-    - **API Key**
-    - **Cache ID**
+   - **Base URL**
+   - **API Key**
+   - **Cache ID**
 
 ### Step 4: Configure LangCache Properties
 
@@ -88,8 +88,8 @@ Change from this:
 ```java
 @GetMapping("/ai/chat/string")
 public Flux<String> chat(@RequestParam("query") String query) {
-    // TODO: Implement semantic caching with the LangCacheService
-    return assistant.chat(SYSTEM_PROMPT, query);
+   // TODO: Implement semantic caching with the LangCacheService
+   return assistant.chat(SYSTEM_PROMPT, query);
 }
 ```
 
@@ -98,14 +98,14 @@ To this:
 ```java
 @GetMapping("/ai/chat/string")
 public Flux<String> chat(@RequestParam("query") String query) {
-    return langCacheService.searchForResponse(query)
-            .map(Flux::just)
-            .orElseGet(() -> assistant.chat(SYSTEM_PROMPT, query)
-                    .collectList()
-                    .map(responses -> String.join("", responses))
-                    .doOnNext(response -> langCacheService.addNewResponse(query, response))
-                    .flux()
-            );
+   return langCacheService.searchForResponse(query)
+           .map(Flux::just)
+           .orElseGet(() -> assistant.chat(SYSTEM_PROMPT, query)
+                   .collectList()
+                   .map(responses -> String.join("", responses))
+                   .doOnNext(response -> langCacheService.addNewResponse(query, response))
+                   .flux()
+           );
 }
 ```
 
@@ -254,34 +254,8 @@ Congratulations! You've successfully:
 - ✅ Improved response times dramatically
 - ✅ Added cost optimization through caching
 
-## 🏆 Workshop Complete!
-
-You've now built a complete context engineering solution with:
-- ✅ **Short-term Memory** (Lab 2)
-- ✅ **Knowledge Base** (Lab 3)
-- ✅ **RAG Pipeline** (Lab 4)
-- ✅ **Long-term Memory** (Lab 5)
-- ✅ **Query Optimization** (Lab 6)
-- ✅ **Context ReRanking** (Lab 6)
-- ✅ **Few-shot Learning** (Lab 7)
-- ✅ **Token Management** (Lab 8)
-- ✅ **Semantic Caching** (Lab 9)
-
 ## 📚 Additional Resources
 
 - [What is Semantic Caching?](https://redis.io/blog/what-is-semantic-caching/)
 - [Redis LangCache Documentation](https://redis.io/docs/latest/develop/ai/langcache/)
 - [Vector Similarity Search](https://redis.io/docs/latest/develop/ai/search-and-query/vectors/)
-
-## 🚀 Next Steps
-
-Consider these enhancements:
-- Implement cache warming strategies
-- Add cache analytics dashboard
-- Experiment with different similarity thresholds
-- Implement cache invalidation patterns
-- Scale to production with Redis Enterprise
-
----
-
-**Thank you for completing the Context Engineering Workshop!** 🎊
